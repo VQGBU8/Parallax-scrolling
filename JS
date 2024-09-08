@@ -1,0 +1,21 @@
+$(window).on('scroll', function() {
+  var scrolled = $(window).scrollTop();
+
+  // Parallax for background layers
+  $('.layer-1').css('transform', 'translateY(' + (scrolled * 0.25) + 'px)');
+  $('.layer-2').css('transform', 'translateY(' + (scrolled * 0.5) + 'px)');
+  $('.layer-3').css('transform', 'translateY(' + (scrolled * 0.75) + 'px)');
+
+  // Floating animations for leaves, birds, and butterflies
+  $('.leaf-1').css('top', (200 - (scrolled * 0.5)) + 'px');
+  $('.leaf-2').css('top', (300 - (scrolled * 0.7)) + 'px');
+  $('.leaf-3').css('top', (500 - (scrolled * 0.4)) + 'px');
+
+  $('.bird-1').css('top', (200 - (scrolled * 0.6)) + 'px');
+  $('.bird-2').css('top', (150 - (scrolled * 0.8)) + 'px');
+  $('.bird-3').css('top', (300 - (scrolled * 0.4)) + 'px');
+
+  $('.butterfly-1').css('top', (600 - (scrolled * 0.5)) + 'px');
+  $('.butterfly-2').css('top', (350 - (scrolled * 0.6)) + 'px');
+  $('.butterfly-3').css('top', (400 - (scrolled * 0.7)) + 'px');
+});
